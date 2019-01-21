@@ -1,0 +1,29 @@
+material Max40Sign/Diffuse
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Max40Sign_Diffuse.png
+      }
+    }
+  }
+}
+
+material Max40Sign/Specular
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture Max40Sign_Spec.png
+      }
+    }
+  }
+}

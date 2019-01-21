@@ -1,0 +1,9 @@
+<launch>
+
+  <arg name="rvizconfig" default="$(find perception)/launch/default.rviz" />
+  <!-- Run the main node -->
+  <node name="perception_node" pkg="perception" type="perception_node"  output="screen" ns="perception_node">
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  
+</launch>

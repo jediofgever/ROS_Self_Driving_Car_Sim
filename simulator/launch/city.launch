@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="verbose" value="true"/>
+    <arg name="world_name" value="$(find simulator)/worlds/simple_city.world"/>
+  </include>
+
+     <arg name="model" default="$(find self_driving_car_description)/urdf/prius.urdf"/>
+     <param name="robot_description" textfile="$(arg model)"/>
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -x 1.0 -y -0.5 -z 0.1 - -model prius"/>
+
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  </node>
+
+  <!-- need for publishing joint states that are not controlled -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" respawn="false" output="screen">
+  </node>
+
+</launch>

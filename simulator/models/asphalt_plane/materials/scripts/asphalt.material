@@ -1,0 +1,13 @@
+material vrc/asphalt
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture tarmac.png
+			}
+		}
+	}
+}

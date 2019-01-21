@@ -1,0 +1,14 @@
+material vrc/ground
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture forest.jpg
+				scale 0.01 0.01
+			}
+		}
+	}
+}
