@@ -4,22 +4,22 @@ Minimalistic Self Driving Car Simulation with basic Sensors and Perception Tasks
 
 ## Installing ROS
 
-Setup your computer to accept software from packages.ros.org. 
+  Accept software from packages.ros.org. 
 
  > sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 
-Set up your keys
+Set up keys
 
  > sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
  
-Make sure your Debian package index is up-to-date: 
+Debian  up-to-date: 
  > sudo apt-get update
 
 Install full ROS version: 
  > sudo apt-get install ros-kinetic-desktop-full
 
 
-Before you can use ROS, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS:
+You will need to initialize rosdep:
  > sudo rosdep init
 
  > rosdep update
@@ -59,12 +59,14 @@ ROS packages:
 
  > sudo apt-get install  ros-kinetic-laser-geometry ros-kinetic-joint-state-publisher
  
-## Create a new Ros Workspace
+## Create a new Ros Workspace and Compile
 > mkdir -p catkin_ws/src
 
-Extract content of SelfDrivingCar.tar.gz into catkin_ws/src directory.
-Compile your workspace
-> cd catkin_ws
+> cd catkin_ws/src
+
+> git clone https://github.com/jediofgever/ROS_Self_Driving_Car_Sim.git
+
+> cd ..
 
 > catkin_make
 
