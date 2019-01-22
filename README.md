@@ -1,7 +1,9 @@
 # ROS_Self_Driving_Car_Sim
 Minimalistic Self Driving Car Simulation with basic Sensors and Perception Tasks
 
-![](images/gif.gif)
+[Project Manual ](https://github.com/jediofgever/ROS_Self_Driving_Car_Sim/blob/master/resources/Manualof_Project.pdf)
+
+![](resources/gif.gif)
 
 ## Installing ROS
 
