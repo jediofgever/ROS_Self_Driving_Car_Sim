@@ -39,7 +39,7 @@ PerceptionNode::~PerceptionNode() {
 }
 
 void PerceptionNode::ProcessScenarioView() {
-    // GEt drivers view image
+    // Get drivers view image
     cv::Mat frame = sensor_perception_.GetCameraImage();
 
     // Show image

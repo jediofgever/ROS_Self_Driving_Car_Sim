@@ -8,7 +8,7 @@
 #include <perception/grid_cell_costmap.h>
 #include <boost/foreach.hpp>
 
-// Construct Copilot Costmap
+// Construct  Costmap
 GridCellCostmap::GridCellCostmap() {
     // Init NodeHandler Ptr
     nh_ = ros::NodeHandlePtr(new ros::NodeHandle());
@@ -35,13 +35,13 @@ GridCellCostmap::GridCellCostmap() {
     detected_obstacles_publisher_ =
         nh_->advertise<visualization_msgs::MarkerArray>("detected_obstacles_",
                                                         1);
-    // Publish LOcal Costmap , can be used for path planing, but must be
+    // Publish Local Costmap , can be used for path planing, but must be
     // combines with global map
     local_costmap_publisher_ =
         nh_->advertise<nav_msgs::OccupancyGrid>("local_costmap_", 1);
 }
 
-// Deconstruct Copilot Costmap
+// Deconstruct  Costmap
 GridCellCostmap::~GridCellCostmap(){};
 
 // Get local occupancy grid map. Includes the map topology and the road
@@ -51,7 +51,7 @@ const nav_msgs::OccupancyGrid GridCellCostmap::GetOccupancyGrid() {
     return obstacle_grid_;
 }
 
-// Get local occupancy grid map pointer. Includes the map topology and the
+// Get local occupancy grid map pointer. Includes the map and the
 // road obstacles.
 // return: Occupancy grid ROS type pointer.
 // Returns pointer to Copilot_costmap
